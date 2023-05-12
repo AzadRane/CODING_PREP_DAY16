@@ -1,0 +1,10 @@
+when memory created dynamically and no one is refering to it then it is called garbage.
+reclaiming the  memory not refered and is no longer needed and making available for others is called garbage collection
+Garbage collection is a program which is running in background 
+there are two ways to call garbage collector 
+1.System class-> System.gc()
+2.Runtime class->Runtime rt = new Runtime.getRuntime(); ->rt.gc();
+finalize() method -> this method is inside object class , to modify this we have to override it ->public void finalize()
+it is similar to destroctor in c++
+this method is called automatically before performing gc to perform cleanup activites as closing file, or database connection etc.
+sometimes object may hold references of other resources like file , database then garbge collector is not able to free hence we have to write explicitly.
